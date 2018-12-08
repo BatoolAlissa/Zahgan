@@ -94,6 +94,11 @@ text-align: center;
     overflow: hidden;
     
   }
+ .Dec-text{
+ 
+  overflow: hidden;
+    
+  }
 
   .footerStyle{
     position: absolute;
