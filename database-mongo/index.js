@@ -1,21 +1,20 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+//create Event Schema and model for the creator
 const EventSchema = new Schema({
     creatorName: {
         type: String,
         required: [true, 'Name Field is Required']
     },
 
-   
-
     eventName: {
         type: String,
         required: [true, 'Name Field is Required']
     },
 
-    cost:{
-        type:Number,
+    cost: {
+        type: Number,
         required: [true, 'Name Field is Required']
     },
     des: {
@@ -46,25 +45,4 @@ const EventSchema = new Schema({
 
 var Event = mongoose.model('Event', EventSchema);
 
-
-
-// let save = (data ,cb) => {
-//        console.log('hhhhh',data[0].Name)
-//     let student = new Student({Name:data[0].Name,HomeWork:data[0].HomeWork});
-//     student.save();
-// }
-
-
-// var selectAll = function(callback) {
-//   Student.find({}, function(err, items) {
-//     if(err) {
-//       callback(err, null);
-//     } else {
-//       callback(null, items);
-//     }
-//   });
-// };
-
-// module.exports.selectAll = selectAll;
-// module.exports.save=save;
 module.exports = Event;
